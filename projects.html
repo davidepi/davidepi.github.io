@@ -2,3 +2,46 @@
 layout: default
 title: Projects - davidepi
 ---
+
+<article class="proj">
+    <header>
+        <h1>Personal Projects</h1>
+    </header>
+    <section>
+        <header>[2017-2018] <strong>Spectre-light</strong></header>
+        <p>
+            Physically-based Rendering Engine
+        </p>
+
+        <p>
+            Physically based renderer implemented from scratch, mainly to properly learn how rendering works under the hood. No libraries were used, everything has been written from scratch.
+        </p>
+
+        <p>
+            This renderer is not a realtime one: it uses a raytracing approach and to calculate the radiance in the scene, with a path tracing unbiased integrator. 
+            The renderer itself is fairly complex, as Multiple Importance Sampling and two different types of acceleration structures (<a href="http://graphics.cs.cmu.edu/projects/aac/">BVH-AAC</a> and Kd-Trees) are used to speed up rendering times.
+            Ultimately, a full HD picture with around 1M triangles requires a couple of minutes of rendering time.
+        </p>
+
+        <p>
+        <a href="https://github.com/davidepi/spectre-light">Code</a>
+        <a href="https://raw.githubusercontent.com/davidepi/spectre-light/dev/docs/readme_image.jpg">Example Image</a>
+        </p>
+    </section>
+
+    <section >
+        <header>[2018] <strong>Kademlia</strong></header>
+        <p>
+            Implementation of the famous Distributed Hash Table
+        </p>
+        <p>
+            Started as a simple academic project, the implementation of this DHT turned out to be more complex than expected.
+            The kademlia paper itself is not particularly clear in how to solve certain situations, and C++ is definitely NOT the language one would use for anything so dependent on async events.
+            Furthermore, for reason that I could not remember, I decided to <a href="https://github.com/davidepi/kademlia/blob/master/src/Key.cpp">implement SHA1 by myself</a> instead of using the one provided by openssl.
+            Nonetheless the final result is nice, so I decided to leave it public. Rust port SOON&trade;.
+        </p>
+        <p>
+            <a href="https://github.com/davidepi/kademlia">Code</a>
+        </p>
+    </section>
+</article>
